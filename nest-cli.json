@@ -1,8 +1,41 @@
 {
   "$schema": "https://json.schemastore.org/nest-cli",
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src",
+  "sourceRoot": "apps/environmental-assistant-api-gateway/src",
   "compilerOptions": {
-    "deleteOutDir": true
+    "deleteOutDir": true,
+    "webpack": true,
+    "tsConfigPath": "apps/environmental-assistant-api-gateway/tsconfig.app.json"
+  },
+  "monorepo": true,
+  "root": "apps/environmental-assistant-api-gateway",
+  "projects": {
+    "environmental-assistant-api-gateway": {
+      "type": "application",
+      "root": "apps/environmental-assistant-api-gateway",
+      "entryFile": "main",
+      "sourceRoot": "apps/environmental-assistant-api-gateway/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/environmental-assistant-api-gateway/tsconfig.app.json"
+      }
+    },
+    "aws": {
+      "type": "application",
+      "root": "apps/aws",
+      "entryFile": "main",
+      "sourceRoot": "apps/aws/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/aws/tsconfig.app.json"
+      }
+    },
+    "users": {
+      "type": "application",
+      "root": "apps/users",
+      "entryFile": "main",
+      "sourceRoot": "apps/users/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/users/tsconfig.app.json"
+      }
+    }
   }
 }
