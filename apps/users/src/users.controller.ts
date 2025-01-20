@@ -4,10 +4,10 @@ import { MessagePattern } from '@nestjs/microservices';
 
 @Controller()
 export class UsersController {
-  constructor(private readonly usersService: UsersService) {}
+  constructor(private usersService: UsersService) {}
 
-  @MessagePattern('users.find')
-  findUsers() {
+  @MessagePattern('users.getAll')
+  getUsers() {
     return this.usersService.getUsers();
   }
 }

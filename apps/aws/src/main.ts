@@ -9,5 +9,7 @@ async function bootstrap() {
       port: 3002,
     },
   });
+
+  await app.listen();
 }
 bootstrap();

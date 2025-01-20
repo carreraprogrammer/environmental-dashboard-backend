@@ -7,6 +7,7 @@ export class UsersController {
 
   @Get()
   getUsers() {
+    console.log('Received request for users.getAll')
     return this.usersService.getUsers();
   }
 }
