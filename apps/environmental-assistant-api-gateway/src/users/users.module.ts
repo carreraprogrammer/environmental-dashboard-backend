@@ -12,7 +12,6 @@ import { ClientsModule, Transport } from '@nestjs/microservices';
         name: 'USERS_CLIENT',
         transport: Transport.TCP,
         options: {
-          host: '127.0.0.1', // Añade esto explícitamente
           port: 3001,
         }
       },
