@@ -8,7 +8,6 @@ async function bootstrap() {
     {
       transport: Transport.TCP,
       options: {
-        host: '127.0.0.1', // Añade esto explícitamente
         port: 3001,
       },
     },
