@@ -10,4 +10,9 @@ export class AwsController {
   getHello() {
     return this.awsService.getHello();
   }
+
+  @MessagePattern('aws.getUploadUrl')
+  getUploadUrl() {
+    return this.awsService.getUploadUrl();
+  }
 }

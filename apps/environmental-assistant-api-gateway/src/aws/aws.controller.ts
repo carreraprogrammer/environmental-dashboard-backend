@@ -10,4 +10,10 @@ export class AwsController {
     console.log('Received request for aws.getHello')
     return this.awsService.getHello();
   }
+
+  @Get('getUploadUrl')
+  getUploadUrl() {
+    console.log('Received request for aws.getUploadUrl')
+    return this.awsService.getUploadUrl();
+  }
 }

@@ -14,4 +14,13 @@ export class AwsService {
       throw new Error('Could not fetch aws');
     }
   }
+
+  async getUploadUrl() {
+    try {
+      return await lastValueFrom(this.awsClient.send('aws.getUploadUrl', {}));
+    } catch (error) {
+      console.error('Error fetching aws:', error);
+      throw new Error('Could not fetch aws');
+    }
+  }
 }
